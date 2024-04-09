@@ -11,6 +11,7 @@ app.use(express.json());
 app.post("/contact", (req, res) => {
 
     const {fullName, email, phone, service, message} = req.body;
+    console.log(fullName, email, phone, service, message);
     res.json({data :"good"})
     nodemailer.createTestAccount((error,account)=>{
         if(error){
